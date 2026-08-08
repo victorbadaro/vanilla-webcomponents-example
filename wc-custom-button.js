@@ -30,4 +30,4 @@ class CustomButton extends HTMLElement {
   }
 }
 
-customElements.define('custom-button', CustomButton);
+customElements.define('wc-custom-button', CustomButton);
