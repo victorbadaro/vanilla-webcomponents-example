@@ -11,13 +11,13 @@ class CustomButton extends HTMLElement {
           border: none;
           border-radius: 4px;
           cursor: pointer;
-          background-color: #9ae600;
-          color: #192e03;
+          background-color: var(--custom-button-background-color, #9ae600);
+          color: var(--custom-button-text-color, #192e03);
           transition: background-color 200ms, transform 200ms;
         }
 
         button:hover {
-          background-color: #7ccf00;
+          background-color: var(--custom-button-background-color-hover, #7ccf00);
         }
 
         button:active {
