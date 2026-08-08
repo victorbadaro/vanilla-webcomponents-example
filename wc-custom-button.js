@@ -25,8 +25,14 @@ class CustomButton extends HTMLElement {
         }
       </style>
 
-      <button type="button">This is a Custom Button!</button>
+      <button type="button" id="custom-button">This is a Custom Button!</button>
     `;
+
+    const customButton = shadowDOM.getElementById('custom-button');
+
+    customButton.addEventListener('click', function () {
+      console.log('The Custom Button element was clicked! 🙌');
+    });
   }
 }
 
