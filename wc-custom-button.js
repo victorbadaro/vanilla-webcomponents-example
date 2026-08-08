@@ -5,8 +5,9 @@ class CustomButton extends HTMLElement {
     const shadowDOM = this.attachShadow({ mode: 'open' });
     const customButtonStyles = document.createElement('style');
     const customButton = document.createElement('button');
+    const slot = document.createElement('slot');
 
-    customButtonStyles.innerHTML = `
+    customButtonStyles.textContent = `
       button {
         padding: 8px 16px;
         border: none;
@@ -26,8 +27,10 @@ class CustomButton extends HTMLElement {
       }
     `;
 
-    customButton.type = 'button';
-    customButton.textContent = 'This is a Custom Button!';
+    slot.textContent = 'This is a Custom Button!';
+
+    customButton.setAttribute('type', 'button');
+    customButton.appendChild(slot);
     customButton.addEventListener('click', function () {
       console.log('The Custom Button element was clicked! 🙌');
     });

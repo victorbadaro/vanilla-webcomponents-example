@@ -6,20 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
   <title>Vanilla Web Components Example</title>
-
-  <style>
-    main {
-      display: flex;
-      flex-direction: column;
-      row-gap: 16px;
-    }
-
-    .custom-colors {
-      --custom-button-background-color: #ffb900;
-      --custom-button-background-color-hover: #fe9a00;
-      --custom-button-text-color: #461901;
-    }
-  </style>
 </head>
 
 <body>
@@ -34,6 +20,11 @@
     <div class="custom-colors">
       <h2>Custom Button with custom colors</h2>
       <wc-custom-button></wc-custom-button>
+    </div>
+
+    <div>
+      <h2>Custom Button with custom text</h2>
+      <wc-custom-button>Custom text</wc-custom-button>
     </div>
   </main>
 
