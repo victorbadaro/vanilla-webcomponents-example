@@ -8,7 +8,13 @@
   <title>Vanilla Web Components Example</title>
 
   <style>
-    :root {
+    main {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    .custom-colors {
       --custom-button-background-color: #ffb900;
       --custom-button-background-color-hover: #fe9a00;
       --custom-button-text-color: #461901;
@@ -18,7 +24,18 @@
 
 <body>
   <h1>Hello, Web Components! 👋</h1>
-  <wc-custom-button></wc-custom-button>
+
+  <main>
+    <div>
+      <h2>Default Custom Button</h2>
+      <wc-custom-button></wc-custom-button>
+    </div>
+
+    <div class="custom-colors">
+      <h2>Custom Button with custom colors</h2>
+      <wc-custom-button></wc-custom-button>
+    </div>
+  </main>
 
   <script src="./wc-custom-button.js"></script>
 </body>

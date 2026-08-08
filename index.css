@@ -19,3 +19,15 @@ a {
 button {
   cursor: pointer;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.custom-colors {
+  --custom-button-background-color: #ffb900;
+  --custom-button-background-color-hover: #fe9a00;
+  --custom-button-text-color: #461901;
+}
